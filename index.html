@@ -274,44 +274,86 @@
       <div class="content">
         <div class="mxw800p">
           <h3>Contactanos</h3>
+          <div class="contactForm">
+            <form name="contact" method="POST" data-netlify="true">
+              <div class="row100">
+                <div class="inputBx50">
+                  <input type="text" name="name" placeholder="Full Name" />
+                </div>
+                <div class="inputBx50">
+                  <input type="email" name="email" placeholder="Email Addres" />
+                </div>
+              </div>
+              <div class="row100">
+                <div class="inputBx100">
+                  <textarea name="message" placeholder="Message"></textarea>
+                </div>
+              </div>
+              <div class="row100">
+                <div class="inputBx100">
+                  <input type="submit" value="Send" />
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="contactForm">
-          <form>
-            <div class="row100">
-              <div class="inputBx50">
-                <input type="text" name="" placeholder="Full Name" />
-              </div>
-              <div class="inputBx50">
-                <input type="text" name="" placeholder="Email Addres" />
-              </div>
-            </div>
-            <div class="row100">
-              <div class="inputBx100">
-                <textarea placeholder="Message"></textarea>
-              </div>
-            </div>
-            <div class="row100">
-              <div class="inputBx100">
-                <input type="submit" value="Send" />
-              </div>
-            </div>
-          </form>
+        <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+          <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+          <script>
+            (function () {
+              var setting = {
+                height: 400,
+                width: 400,
+                zoom: 17,
+                queryString:
+                  "Avenida Fuentes de Satélite 25b, Colonial Satelite, Naucalpan de Juárez, Méx., México",
+                place_id:
+                  "EllBdmVuaWRhIEZ1ZW50ZXMgZGUgU2F0w6lsaXRlIDI1YiwgQ29sb25pYWwgU2F0ZWxpdGUsIE5hdWNhbHBhbiBkZSBKdcOhcmV6LCBNw6l4LiwgTcOpeGljbyIwEi4KFAoSCVUPgow0A9KFEVY_451wrAylEBkqFAoSCbF6Zj01A9KFEQguoT-Dk1X_",
+                satellite: false,
+                centerCoord: [19.518951505629424, -99.2517915],
+                cid: "0x6a31170b9e7a1c6b",
+                lang: "es",
+                cityUrl: "/mexico/mexico-city",
+                cityAnchorText: "Mapa de México DF, Estado de México, México",
+                id: "map-9cd199b9cc5410cd3b1ad21cab2e54d3",
+                embed_id: "206557",
+              };
+              var d = document;
+              var s = d.createElement("script");
+              s.src = "https://1map.com/js/script-for-user.js?embed_id=206557";
+              s.async = true;
+              s.onload = function (e) {
+                window.OneMap.initMap(setting);
+              };
+              var to = d.getElementsByTagName("script")[0];
+              to.parentNode.insertBefore(s, to);
+            })();
+          </script>
+          <a href="https://1map.com/es/map-embed">1 Map</a>
+        </div>
+      </div>
+    </section>
+    <section class="redes" id="redes">
+      <div class="redesBx">
+        <div class="datos">
+          <p>clinicamatsya@gmail.com</p>
+          <p>Tel: 55-45-76-89</p>
         </div>
         <div class="sci">
           <ul>
             <li>
               <a href="https://www.facebook.com/clinicamatsya/">
-                <img src="facebook.png" alt="" />
+                <img src="./assets/facebook.png" alt="" />
               </a>
             </li>
             <li>
               <a href="https://twitter.com/ClinicaMatsya">
-                <img src="twitter.png" alt="" />
+                <img src="./assets/twitter.png" alt="" />
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/clinicamatsya/">
-                <img src="instagram.png" alt="" />
+                <img src="./assets/instagram.png" alt="" />
               </a>
             </li>
           </ul>
