@@ -35,7 +35,12 @@
       <div class="toggle" onclick="toggle()"></div>
     </header>
     <section class="banner" id="home">
-      <h2 data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">
+      <div class="bannon" data-depth="0.4"></div>
+      <h2
+        data-0-top="opacity:0;left:100px;"
+        data-200-top="opacity:1;left:0px;"
+        data-depth="1.00"
+      >
         Respira<br />
         <span style="--i: 1;">#</span>
         <span style="--i: 2;">h</span>
@@ -110,12 +115,14 @@
             id="formacion"
             data-center-center="opacity:1;bottom:0;"
             data-700-bottom="opacity:0;bottom:-400px;"
+            data-depth="0.4"
           ></div>
           <div
             class="box"
             id="yoga"
             data-center-center="opacity:1;right:0;"
             data-700-bottom="opacity:0;right:-400px;"
+            data-depth="0.6"
           ></div>
         </div>
       </div>
@@ -406,6 +413,11 @@
         var header = document.getElementById("header");
         header.classList.toggle("active");
       }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+      var scene = document.getElementById("home");
+      var parallax = new Parallax(scene);
     </script>
   </body>
 </html>
