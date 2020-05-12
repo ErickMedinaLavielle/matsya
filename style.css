@@ -13,8 +13,12 @@ html {
 }
 
 body {
-  min-height: 1000px;
+  max-height: 1000px;
   overflow-x: hidden;
+  background: url("assets/banner.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: -150px;
 }
 
 /* HEADER */
@@ -35,6 +39,7 @@ header.sticky {
   padding: 5px 100px;
   background: rgb(255, 215, 134);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
 }
 header .logo {
   position: relative;
@@ -74,15 +79,11 @@ header.sticky ul li a {
   color: #af6c6c;
 }
 /* BANNER */
+
 .banner {
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100vh;
-  display: flex;
-  background: url("./assets/banner.jpg");
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
 }
 
 .bannon {
@@ -90,8 +91,47 @@ header.sticky ul li a {
   height: 100%;
   background: url("./assets/banner.jpg");
   background-size: cover;
+
+  background-position: bottom;
+  background-position-y: -150px;
 }
-.banner h2 {
+
+.banner .clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner .clouds img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  animation: clouds calc(8s * var(--i)) linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes clouds {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.eslogan {
+  padding: 100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eslogan h2 {
   color: #fff;
   margin-top: 100px;
   font-size: 90px;
@@ -100,7 +140,7 @@ header.sticky ul li a {
   line-height: 1em;
 }
 
-.banner h2 span {
+.eslogan h2 span {
   position: relative;
   display: inline-block;
   color: rgb(183, 213, 87);
@@ -122,7 +162,6 @@ header.sticky ul li a {
 
 /* ABOUT */
 .sec {
-  background: #e8c9c9;
   padding: 100px;
   min-height: 100vh;
   display: flex;
@@ -164,6 +203,7 @@ p {
   text-decoration: none;
   color: #fff;
 }
+
 /* SERVICES */
 .services {
   position: relative;
@@ -205,8 +245,8 @@ p {
   color: #fff;
 }
 
+/*COMMUNITY*/
 .community {
-  background: rgb(233, 110, 149);
   padding-top: 250px;
   margin-top: -250px;
 }
@@ -312,6 +352,7 @@ p {
   font-size: 12px;
   font-weight: 300;
 }
+
 /* CONTACT */
 .contact {
   background: rgb(233, 110, 149);
@@ -495,7 +536,7 @@ p {
   header,
   header.sticky {
     padding: 1px 50px;
-    background: red;
+    background: rgb(255, 215, 134);
   }
 
   header ul {
@@ -538,8 +579,18 @@ p {
     background-position: center;
   }
 
-  .banner h2 {
-    font-size: 40px;
+  .bannon {
+    width: 100%;
+    height: 100%;
+    background: url("./assets/banner.jpg");
+    background-size: cover;
+  }
+  .eslogan {
+    padding: 0;
+    background-position: center;
+  }
+  .eslogan h2 {
+    font-size: 30px;
     padding: 0 50px;
   }
 

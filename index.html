@@ -35,7 +35,16 @@
       <div class="toggle" onclick="toggle()"></div>
     </header>
     <section class="banner" id="home">
-      <div class="bannon" data-depth="0.4"></div>
+      <div class="bannon" data-depth="0.09"></div>
+      <div class="clouds">
+        <img src="./assets/cloud1.png" style="--i: 1;" />
+        <img src="./assets/cloud2.png" style="--i: 2;" />
+        <img src="./assets/cloud3.png" style="--i: 3;" />
+        <img src="./assets/cloud4.png" style="--i: 4;" />
+        <img src="./assets/cloud5.png" style="--i: 5;" />
+      </div>
+    </section>
+    <section class="eslogan" id="eslogan">
       <h2
         data-0-top="opacity:0;left:100px;"
         data-200-top="opacity:1;left:0px;"
@@ -59,7 +68,7 @@
     <!--About-->
 
     <section class="sec" id="about">
-      <div class="content">
+      <div class="content" data-depth="1.00">
         <div class="mxw800p">
           <h3
             data-center-center="opacity:1;left:0;"
@@ -86,7 +95,7 @@
             href="#"
             class="btn"
             data-center-center="opacity:1;bottom:0;"
-            data-0-bottom="opacity:0;bottom:-400px;"
+            data-0-bottom="opacity:0;bottom:-200px;"
             >Read Our Story</a
           >
         </div>
@@ -94,7 +103,7 @@
     </section>
     <!--Services-->
     <section class="sec" id="services">
-      <div class="content">
+      <div class="content" data-depth="1.00">
         <div class="mxw800p">
           <h3
             data-center-center="opacity:1;right:0;"
@@ -129,7 +138,7 @@
     </section>
     <!--community-->
     <section class="sec community" id="community">
-      <div class="content">
+      <div class="content" data-depth="1.00">
         <div class="mxw800p">
           <h3
             data-center-center="opacity:1;right:0;"
@@ -142,7 +151,7 @@
           <div
             class="box"
             data-center-center="opacity:1;left:0;"
-            data-700-bottom="opacity:0;left:-400px;"
+            data-700-bottom="opacity:0;left:-200px;"
           >
             <iframe
               class="instagram"
@@ -159,7 +168,7 @@
           <div
             class="box"
             data-center-center="opacity:1;bottom:0;"
-            data-700-bottom="opacity:0;bottom:-400px;"
+            data-700-bottom="opacity:0;bottom:-200px;"
           >
             <iframe
               class="instagram"
@@ -176,7 +185,7 @@
           <div
             class="box"
             data-center-center="opacity:1;right:0;"
-            data-700-bottom="opacity:0;right:-400px;"
+            data-700-bottom="opacity:0;right:-200px;"
           >
             <iframe
               class="instagram"
@@ -195,7 +204,7 @@
     </section>
     <!--Team-->
     <section class="sec work" id="team">
-      <div class="content">
+      <div class="content" data-depth="1.00">
         <div class="mxw800p">
           <h3
             data-center-center="opacity:1;right:0;"
@@ -370,6 +379,22 @@
         </p>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+      // Pretty simple huh?
+      var scene = document.getElementById("home");
+      var parallax = new Parallax(scene);
+      var scene1 = document.getElementById("eslogan");
+      var parallax1 = new Parallax(scene1);
+      var scene2 = document.getElementById("about");
+      var parallax2 = new Parallax(scene2);
+      var scene3 = document.getElementById("services");
+      var parallax3 = new Parallax(scene3);
+      var scene4 = document.getElementById("community");
+      var parallax4 = new Parallax(scene4);
+      var scene5 = document.getElementById("team");
+      var parallax5 = new Parallax(scene5);
+    </script>
     <script src="./scripts/skrollr.js"></script>
     <script type="text/javascript">
       window.onload = function () {
@@ -413,11 +438,6 @@
         var header = document.getElementById("header");
         header.classList.toggle("active");
       }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script>
-      var scene = document.getElementById("home");
-      var parallax = new Parallax(scene);
     </script>
   </body>
 </html>
